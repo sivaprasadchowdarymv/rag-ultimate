@@ -1,0 +1,10 @@
+# RAG∞ Ultimate - runtime dependencies (tested with Python 3.12 and 3.13)
+streamlit>=1.50,<2          # web UI (Markdown + LaTeX rendering)
+pymupdf>=1.24,<3            # PDF text, tables (find_tables), images, page rendering for OCR
+pandas>=2.1,<4              # table browse view
+numpy>=1.26,<3              # embedding matrix / cosine similarity
+rapidfuzz>=3.6,<4           # fuzzy half of hybrid retrieval
+httpx>=0.27,<1              # OpenRouter API (chat, embeddings, rerank) - no vendor SDK needed
+fastembed>=0.6,<1           # LOCAL fallback models: embeddings (nomic) + cross-encoder (claim-support checks)
+huggingface_hub>=0.24,<2    # persistent storage in a private HF dataset (also used by fastembed)
+python-dotenv>=1.0,<2       # reads the optional .env file for local runs
